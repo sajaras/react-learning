@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ContactsPage from './components/ContactsPage';
 import Login from './components/Login';
 import { checkLogin } from './api';
+import StatePage from './components/StatePage';
 
 
 
@@ -29,8 +30,16 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
+
+            {/* example for useContexts  */}
           <Route path="/login" element={!isLoggedIn() ? <Login /> : <Navigate replace to="/books" />} ></Route>
           <Route path="/books" element={isLoggedIn() ? <BooksPage /> : <Navigate replace to="/login" />} ></Route>
+          {/*end of  example for useContexts  */}
+
+           {/* application sample */}
+           <Route path="/states" element={isLoggedIn() ? <StatePage /> : <Navigate replace to="/login" />} ></Route>
+
+           {/* end of application sample */}
 
         </Routes>
 
