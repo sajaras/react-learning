@@ -22,7 +22,7 @@ const TestPage = () => {
             <div className="col-3">
                 <StartDate></StartDate>
                 
-                <StartDate></StartDate>
+                
             </div>
             <div className="col-3">
             <EndDate></EndDate>
