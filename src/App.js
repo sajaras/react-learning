@@ -9,6 +9,8 @@ import ContactsPage from './components/ContactsPage';
 import Login from './components/Login';
 import { checkLogin } from './api';
 import StatePage from './components/StatePage';
+import ThemeTest from './components/ThemeTest';
+
 
 
 
@@ -38,6 +40,8 @@ function App() {
 
            {/* application sample */}
            <Route path="/states" element={isLoggedIn() ? <StatePage /> : <Navigate replace to="/login" />} ></Route>
+
+           <Route path="/themetest" element={<ThemeTest/>} ></Route>
 
            {/* end of application sample */}
 
